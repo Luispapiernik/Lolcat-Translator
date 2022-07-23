@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-project-generator"
+name = "lolcat-translator"
 version = "0.1.0"
-description = "Template for generating python projects"
+description = "This is a translator from a given language to Lolcat language."
 authors = ["Luis Papiernik <lpapiernik24@gmail.com>"]
 
 [tool.poetry.dependencies]
