@@ -6,6 +6,8 @@ authors = ["Luis Papiernik <lpapiernik24@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pydantic = {extras = ["dotenv"], version = "^1.9.1"}
+nltk = "^3.7"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.19.0"
