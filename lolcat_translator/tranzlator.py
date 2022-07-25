@@ -13,16 +13,16 @@ def load_dictionary(filepath: str) -> Dict:
 
 
 def is_capital(string: str) -> bool:
-    return string[0].upper() and string[1:].islower()
+    return string[0].isupper() and string[1:].islower()
 
 
-def replace_word(dictionary: Dict, string: str) -> str:
-    real_string = string.group(0)
+def replace_word(dictionary: Dict, match: re.Match) -> str:
+    string = match.group(0)
 
-    is_upper = real_string.isupper()
-    iscapital = is_capital(real_string)
+    is_upper = string.isupper()
+    iscapital = is_capital(string)
 
-    result_string = dictionary.get(real_string.lower(), real_string)
+    result_string = dictionary.get(string.lower(), string)
     if is_upper:
         result_string = result_string.upper()
     elif iscapital:
@@ -41,6 +41,6 @@ def tranzlate_file(inputfile: str, outputfile: str) -> None:
 
     with open(outputfile, "w") as file:
         for line in lines:
-            file.write(re.sub(
-                r"[a-zA-Z]+", lambda word: replace_word(dictionary, word), line
-            ))
+            file.write(
+                re.sub(r"[a-zA-Z]+", lambda word: replace_word(dictionary, word), line)
+            )
