@@ -1,0 +1,8 @@
+# Lolspeak Tranzlator
+
+ [lolcat](https://en.wikipedia.org/wiki/Lolcat), or LOLcat, iz an image macro ov wan or moar cats. Teh image's text iz often idiosyncratic an intentionally grammatically incorrect, an iz known as **lolspeak**.
+
+
+## TODO
+ * Add support 4 traduction frum multiples languages.
+ * Support teh traduction frum lolspeak 2 multiples languages.

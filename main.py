@@ -12,13 +12,19 @@ def main():
     parser = ArgumentParser()
 
     parser.add_argument(
-        "-i", "--inputfile", default="test/english.txt",
+        "-i",
+        "--inputfile",
+        default="README.md",
     )
     parser.add_argument(
-        "-o", "--outputfile", default="test/lolcat.txt",
+        "-o",
+        "--outputfile",
+        default="lolcat.txt",
     )
     parser.add_argument(
-        "-dd", "--dictionary-filepath", default="storage/tranzlashun.json",
+        "-df",
+        "--dictionary-filepath",
+        default="storage/tranzlashun.json",
     )
 
     args = parser.parse_args()
